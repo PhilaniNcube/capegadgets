@@ -11,15 +11,11 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-mongoose.connect(
-  process.env.MONGODB_URL ||
-    'mongodb+srv://philani:nRmw49M3Qn8qa2q@capegadgets.rncb3.mongodb.net/capegadgets?retryWrites=true&w=majority',
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-  },
-);
+mongoose.connect(process.env.MONGODB_URL, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true,
+});
 
 app.use('/api/users', userRouter);
 app.use('/api/products', productRouter);
