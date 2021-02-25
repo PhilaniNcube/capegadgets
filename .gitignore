@@ -20,6 +20,11 @@ build
 .env.test.local
 .env.production.local
 
+/uploads/*.jpg
+/uploads/*.png
+/uploads/*.jpeg
+/uploads/*.JPG
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
